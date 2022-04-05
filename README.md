@@ -5,31 +5,27 @@ QRCode module for MagicMirror². Show QRCode image of encoded text.
 ![](.github/example.png)
 
 ## Installation
-
-In your terminal, go to your MagicMirror's Module folder:
-````
-cd ~/MagicMirror/modules
-````
-
-Clone this repository:
-````
-git clone git@github.com:MarinescuEvghenii/MMM-QRCode.git
-````
-
-Configure the module in your `config.js` file.
-
+Open up your terminal and paste the following code.
+```
+cd ~/MagicMirror/modules/
+git clone https://github.com/MarinescuEvghenii/MMM-QRCode.git
+cd MMM-QRCode && npm i
+```
 ## Using the module
 
 To use this module, add it to the modules array in the `config/config.js` file:
 ````javascript
-modules: [
-	{
-		module: 'MMM-QRCode',
-		config: {
-			// See 'Configuration options' for more information.
-		}
+{
+	module: 'MMM-QRCode',
+	config: {
+		// See 'Configuration options' for more information.
+		text: 'Some Text', // your message
+		showRaw: true, // true = to diaplay raw text, false = to hide raw text
+		imageSize: 150, // size including both width and heigth
+		colorDark: "#fff", // qrcode pixels color to display
+		colorLight: "#000" // set background color of qrcode
 	}
-]
+}
 ````
 
 ## Configuration options
